@@ -1,0 +1,15 @@
+#list of services
+services:
+  # name of service --- back end
+  api:
+    # location of the dockerfile
+    build: ./server
+    # exposed ports [local]:[in dockerfile]
+    ports:
+      - 3000:3000
+
+  # name of service -- front end
+  client:
+    build: ./client
+    ports: 
+      - 8080:1234
